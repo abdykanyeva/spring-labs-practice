@@ -1,0 +1,5 @@
+# Project exclude paths
+/lab-00-coupling/target/
+/lab-01-ioc/target/
+/lab-02-di/target/
+/lab-04-springmvc/target/
