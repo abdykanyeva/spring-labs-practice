@@ -15,7 +15,13 @@ public class ProfileController {
     @RequestMapping("profile")
     public String getProfile(Model model){
 
-        Profile profile = new Profile("msmith@gmail.com", "+1234556", "mike", "smith", "msmith", LocalDateTime.now());
+        Profile profile = new Profile();
+        profile.setName("Mike");
+        profile.setSurname("Smith");
+        profile.setUserName("mSmith");
+        profile.setEmail("mSmith@gmail.com");
+        profile.setPhoneNumber("12345643");
+        profile.setCreatedDate(LocalDateTime.now());
         model.addAttribute("profile", profile);
 
         return "profile/profile-info";

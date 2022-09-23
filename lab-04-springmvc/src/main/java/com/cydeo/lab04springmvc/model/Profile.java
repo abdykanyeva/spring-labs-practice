@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@AllArgsConstructor
+
 public class Profile {
     private String email;
     private String phoneNumber;

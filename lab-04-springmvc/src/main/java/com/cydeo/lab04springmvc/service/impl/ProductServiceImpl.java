@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -17,13 +18,10 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> searchProduct(String name){
         // todo implement search structure using string startsWith function
 
-        List<Product> product = new ArrayList<>();
-        Product product1 = new Product();
+       return PRODUCT_LIST.stream()
+               .filter(product -> product.getName().startsWith(name))
+               .collect(Collectors.toList());
 
-        if(product1.getName().startsWith(name)){
-            return product;
-        }
-        return new ArrayList<>();
     }
 
     @Override
