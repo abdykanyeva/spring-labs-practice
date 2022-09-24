@@ -12,10 +12,11 @@ public class LoginController {
 
 
 
-    @RequestMapping("login/{email}/{phoneNumber}")
-    public String getLogin(@PathVariable String email, @PathVariable String phoneNumber, Model model){
-        model.addAttribute(email);
-        model.addAttribute(phoneNumber);
+    @RequestMapping("/login/{email}/{phoneNumber}")
+    public String getLogin(@PathVariable("email") String email, @PathVariable("phoneNumber") String phoneNumber, Model model){
+        model.addAttribute("email",email);
+        model.addAttribute("phoneNumber",phoneNumber);
+        model.addAttribute("loginMessage", "Login successful");
 
 
 
